@@ -3,4 +3,5 @@ some code about nlp.
 
 * doc2txt
 * tf-idf
+* cnn text classify
 
