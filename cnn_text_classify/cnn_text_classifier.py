@@ -62,11 +62,11 @@ with graph.as_default():
     l2_loss += tf.nn.l2_loss(W)
     l2_loss += tf.nn.l2_loss(b)
     scores = tf.nn.xw_plus_b(features_pooled_flat_drop, W, b)
-    predictions = tf.argmax(scores, 1)
 
     losses = tf.nn.softmax_cross_entropy_with_logits(logits=scores, labels=train_labels)
     loss = tf.reduce_mean(losses) + l2_lambda * l2_loss
 
+    predictions = tf.argmax(scores, 1)
     correct_predictions = tf.equal(predictions, tf.argmax(train_labels, 1))
     accuracy = tf.reduce_mean(tf.cast(correct_predictions, "float"))
 
