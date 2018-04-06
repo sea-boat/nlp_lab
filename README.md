@@ -5,4 +5,4 @@ some code about nlp.
 * tf-idf
 * cnn text classify
 * hmm cws
-
+* crf ner
